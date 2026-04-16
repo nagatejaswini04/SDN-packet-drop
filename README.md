@@ -43,6 +43,12 @@ h2 (10.0.0.2) --- [s1 Switch] --- [POX Controller]
 * Traffic from **h1 to h2 is blocked using a drop rule**  
 
 ---
+## Behavior Evaluation
+
+Traffic from h1 to h2 is successfully blocked using the controller.
+Packet loss confirms that the drop rule is applied correctly.
+
+Although the drop rule is defined only for h1 → h2, reverse traffic (h2 → h1) may also experience packet loss due to simplified forwarding logic in the controller.
 
 ## Controller Logic
 
